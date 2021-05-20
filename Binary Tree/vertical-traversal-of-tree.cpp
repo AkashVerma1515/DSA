@@ -118,7 +118,7 @@ class Solution
         {
             pair<Node*,int> temp = q.front();		//T.C = O(nlogn) 
             q.pop();								//use unordered map to reduce to O(n) and using min max of horizontal distance 
-            hd = temp.second;
+            hd = temp.second;						// Implemented using level order traversal.
             Node *node = temp.first;
             m[hd].push_back(node->data);
             if (node->left != NULL)
