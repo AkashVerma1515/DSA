@@ -112,6 +112,7 @@ class Solution {
             return 0;
         }
         int old = root->data;
+        root-data = 0;
         root->data = sumtree(root->left) + sumtree(root->right);
         return root->data + old;
     }
