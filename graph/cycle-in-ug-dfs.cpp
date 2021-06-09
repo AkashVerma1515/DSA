@@ -28,6 +28,7 @@ class Solution
                 return true;
             }
         }
+        return false;
     }
     
 	bool isCycle(int V, vector<int>adj[])
