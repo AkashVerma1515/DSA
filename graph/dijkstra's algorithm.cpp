@@ -29,10 +29,10 @@ int main(){
 		int prev = pq.top().second;
 		pq.pop();
 		
-		vector<pair<int,int> >::iterator it;
-		for( it = g[prev].begin() ; it != g[prev].end() ; it++){
-			int next = it->first;
-			int nextDist = it->second;
+		// vector<pair<int,int> >::iterator it;S
+		for(auto it : adj[g]){
+			int next = it.first;
+			int nextDist = it.second;
 			if( distTo[next] > distTo[prev] + nextDist){
 				distTo[next] = distTo[prev] + nextDist;
 				pq.push(make_pair(distTo[next], next));
